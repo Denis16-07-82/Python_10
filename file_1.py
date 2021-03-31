@@ -30,7 +30,7 @@ class Matrix_1:
     def __str__(self):
         string=''
         for ln in self.matrix[0]:
-            string+= '|'+str(ln).strip('[]', )+'|'+'\n'
+            string+= '|'+str(ln).strip('[]')+'|'+'\n'
         return f'{string}'
 B=Matrix_1(p)
 print(B)
