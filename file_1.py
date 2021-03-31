@@ -13,11 +13,24 @@
 # | 3 5 8 3 |
 # | 8 3 7 1 |
 class Matrix:
-    def __init__(self,*args):
+    def __init__(self, *args):
         for ln in args[0]:
-            string=str(ln).strip('[]',)
+            string = str(ln).strip('[]')
             print(f'|{string}|')
 
 
-p=[[3,5,8,3],[8,3,7,1],[1,2,3,4]]
-A=Matrix(p)
+p = [[3, 5, 8, 3], [8, 3, 7, 1], [1, 2, 3, 4]]
+A = Matrix(p)
+
+
+class Matrix_1:
+    def __init__(self, *args):
+        self.matrix = args
+
+    def __str__(self):
+        string=''
+        for ln in self.matrix[0]:
+            string+= '|'+str(ln).strip('[]', )+'|'+'\n'
+        return f'{string}'
+B=Matrix_1(p)
+print(B)
